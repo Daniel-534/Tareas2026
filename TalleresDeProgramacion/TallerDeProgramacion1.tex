@@ -1,0 +1,112 @@
+\documentclass[a4paper]{article}
+
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage[margin=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{parskip}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+\usepackage{float}
+
+
+% cabecera
+\pagestyle{fancy}
+\fancyhead[l]{Daniel Soto}
+\fancyhead[c]{Taller de Programación \#1}
+\fancyhead[r]{\today}
+\fancyfoot[c]{\thepage}
+\renewcommand{\headrulewidth}{0.2pt} % linea horizontal
+
+\begin{document}
+
+\section{Definiciones y Ejemplos}
+
+\subsection{Función suma de divisores $\sigma$}
+
+\textbf{Definición:} Sea $n\in\mathbb{N}$, entonces
+
+$$\sigma(n) = \sum_{d|n}d$$
+
+\textbf{Ejemplo:}
+
+$$\sigma(6) = 1+2+3+6 = 12$$
+
+\subsection{Números Deficientes}
+\textbf{Definición:} $n\in\mathbb{Z}^+$ es deficiente si
+
+$$\sigma(n)<2n$$
+
+\textbf{Ejemplo:} $n=8$ es deficiente porque
+
+$$\sigma(8) = 1+2+4+8 = 15 <2\cdot 8 = 16$$
+
+\subsection{Números Perfectos}
+
+\textbf{Definición:} Un número $n\in\mathbb{N}$ es perfecto si
+
+$$\sigma(n) = 2n$$
+
+\textbf{Ejemplo:} $n=28$ es perfecto porque
+
+$$\sigma(28) = 1+2+4+7+14+28 = 56 = 2\cdot 28$$
+
+\subsection{Números abundantes}
+
+\textbf{Definición:} $n\in\mathbb{Z}^+$ es abundante si
+
+$$\sigma(n)>2n$$
+
+\textbf{Ejemplo:} $n = 12$ es abundante porque
+
+$$\sigma(12) = 1+2+3+4+6+12 = 28 >2\cdot 12 = 24$$
+
+\section{Problemas}
+
+\begin{enumerate}
+    \item Construya la función $\sigma(n)$ utilizando \texttt{def}
+    \item Construya funciones para determinar si $n$ es \textit{deficiente}, \textit{perfecto} o \textit{abundante}.
+    \item ¿Por qué razón cree que a este tipo de números se los clasifica con estos nombres?
+    \item Haga un \textit{plot} tipo \textit{scatter} de $(n, \sigma(n))$ tomando $n$ en el dominio que desee. Pinte los números deficientes con rojo, los números perfectos con verde y los números abundantes con azul.
+    \item después de haber hecho y visto el plot, vuelva a decir por qué razón se les asigna este nombre a tales conjuntos de números. Compare esta respuesta con la respuesta a la pregunta $3)$
+    \item Use la IA para construír 5 preguntas sobre lo hecho anteriormente donde se use estadística para llegar a respuestas interesantes. Deben ser 2 problemas fáciles, 2 nivel medio y 1 difícil.
+    \begin{enumerate}
+        \item \textbf{Nota 1:} Use \texttt{scipy.stats} para solucionar los problemas
+        \item \textbf{Nota 2:} Use el modelo \textit{Qwen3-Coder} para construír las preguntas
+        \item \textbf{Nota 3:} Asegúrese de especificar en el prompt que no le solucione los problemas
+    \end{enumerate}
+\end{enumerate}
+
+\textbf{Recomendaciones respecto a la solución de los problemas:}
+
+\begin{itemize}
+    \item Trate de resolver los problemas en Python sin ayuda de la IA.
+    \item Si no conoce los conceptos estadísticos que se presentan en los problemas, entonces antes de recurrir a la IA considere las siguientes opciones en orden:
+    \begin{itemize}
+        \item Busque en un libro de estadística (si lo conoce)
+        \item Busque en Stack Overflow
+        \item Busque directamente en internet
+        \item Busque la respuesta, con explicación en algún chat de IA. Recomiendo Claude o Deepseek
+    \end{itemize}
+\end{itemize}
+
+Al terminar de solucionar los 5 problemas, presente la solución en un notebook tipo \texttt{.ipynb}. Lo puede construír de manera remota con \textit{Google Colaboratory} o de manera local con \textit{Jupyter Notebook}.
+
+\textbf{Nota:} Si necesita asesoría en algún punto de la actividad, no dude en preguntar.
+
+\textbf{Contacto 1:} daniel.soto.villada@stud.uni-giessen.de
+
+\textbf{Contacto 2:} daniel.sotov@upb.edu.co
+
+\section{Recomendaciones:}
+
+\begin{itemize}
+    \item Tenga en cuenta el \texttt{PEP8}
+    \item Escriba código autorreferenciado
+    \item Escriba el código con el estilo \textit{camel case} o \textit{snake case}, no mezcle estilos
+    \item Escriba el código en inglés
+\end{itemize}
+\end{document}
